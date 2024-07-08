@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-// Define styled components with media queries and additional styles
+// Styled components with media queries and additional styles
 export const Container = styled.div`
   ${mediaQuery} {
     display: flex;
@@ -54,6 +54,10 @@ export const MainContent = styled.div`
     padding-top: 0;
   }
 `;
+
+/* =================
+  Typography 
+ ================= */
 
 export const Heading1 = styled.h1`
   color: #d9d9d9;

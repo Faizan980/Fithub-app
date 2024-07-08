@@ -1,6 +1,6 @@
 import companyLogo from '../assets/fitness.gif';
 import { app } from "../firebase"
-import {getAuth, createUserWithEmailAndPassword} from "firebase/auth"
+import {getAuth, createUserWithEmailAndPassword} from "firebase/auth" // authorization with firebase
 import {
   Container,
   Intro,
@@ -17,12 +17,13 @@ import {
   Input,
   ButtonPrimary,
   GlobalStyle
-} from './StyledComponent'; // Styled Components
+} from './StyledComponent'; // imported Styled Components
 import { useState } from 'react';
 
 const auth = getAuth(app)
 
 export default function Main() {
+  // Setting up state and atuhorization function
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
@@ -55,11 +56,6 @@ export default function Main() {
             <br /> <br />Don't you have an account? Sign Up Now
           </Paragraph>
           <Form>
-            {/* <Input 
-              type="text"
-              required 
-              placeholder="Name" 
-              aria-label="Name" /> */}
             <Input 
               type="email"
               onChange={(e) => setEmail(e.target.value)}
@@ -76,11 +72,6 @@ export default function Main() {
               required 
               placeholder="Password" 
               aria-label="Password" />
-            {/* <Input 
-              type="file" 
-              required 
-              accept="image/png, image/jpg" 
-              aria-label="Choose file" /> */}
             <ButtonPrimary onClick={signUpUser}>Sign Up</ButtonPrimary>
           </Form>   
           <FinePrint>We'll never share your information without permission</FinePrint>
