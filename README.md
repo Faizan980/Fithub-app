@@ -9,3 +9,7 @@
 firebase@10.12.3
 
 styled-components@6.1.11
+
+**Code deployed on Netlify**
+
+Website Link: https://fitness-hubbb.netlify.app/
